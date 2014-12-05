@@ -1,0 +1,19 @@
+	FOLDER LOL:
+The main idea is creating a game that simulates a battle between a hero and a monster.
+The main classes are CharacterClass, which describes the basic properties of the hero
+	and FightClass.php - which describes the process of the battle.
+Olaf, Malphite - specific classes of characters which are descendants CharacterClass.
+After the user's authorization it's going to choose.php, where the hero could be chosen - next to fight.php.
+The authorization, registration and recording into DB haven't been completed yet. Here are only the basic logic.
+
+	FOLDER TESTLOL:
+covering the main classes with 
+- Character:
+	- asserts;
+	- exception test.
+ - DB (testing class that isn't related to the main classes (to the main idea of the game)): 
+	- asserts.
+- Fight
+	- asserts;
+	- Mocks;
+	- exception tests.

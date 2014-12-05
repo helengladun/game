@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <people
+       id="2"
+       name="Johnny"
+       email="depp@ukr.net"/>
+    <people
+       id="3"
+       name="Tom"
+       email="cruise.@ukr.net"/>
+</dataset>
