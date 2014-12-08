@@ -41,15 +41,17 @@ class FightTest extends PHPUnit_Framework_TestCase
 
 	public function testAttack()
 	{
-		$obj = new Fight ('Olaf');
+		$obj = new Fight('Olaf');
 		$fighter1 = $obj->takeHero();
 		$fighter2 = $obj->takeMonster();
 		$attack = $obj->attack($fighter1, $fighter2); 
+		$string = $GLOBALS['giveName'];
 		if ($attack) {
 			$this->assertTrue($attack); 
 		} elseif ($attack == false) {
 			$this->assertFalse($attack);
 		}
+		$this->expectOutputString($string);
 	}
 
 	public function testAttackWithMock()
@@ -65,6 +67,7 @@ class FightTest extends PHPUnit_Framework_TestCase
 		$obj = new Fight ($hero1);
 		$attack = $obj->attack($hero1, $hero2); 
 		$this->assertTrue($attack);
+		$this->expectOutputString(" hited into Head.   protected Head. <br/>");
 	}
 
 	public function testAttackWithRecursiveMock()

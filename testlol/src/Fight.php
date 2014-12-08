@@ -66,7 +66,8 @@ class Fight
 	{
 		$fightMethod = $fighter1->fighter();
 		$protectMethod = $fighter2->protection();
-		echo "{$fighter1->giveName()} hited into $fightMethod. {$fighter2->giveName()}  protected $protectMethod. <br/>";
+		$GLOBALS['giveName'] = "{$fighter1->giveName()} hited into $fightMethod. {$fighter2->giveName()}  protected $protectMethod. <br/>";
+		echo $GLOBALS['giveName'];
 		if ($fightMethod == $protectMethod) {
 			return true;
 		} else {
